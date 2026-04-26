@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+   <children>
+      <Label fx:id="mylabel" layoutX="185.0" layoutY="50.0" prefHeight="43.0" prefWidth="215.0" text="Choose what you'll eat?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="radio1" layoutX="37.0" layoutY="122.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Pizza">
+         <toggleGroup>
+            <ToggleGroup fx:id="food" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radio2" layoutX="213.0" layoutY="122.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Burger" toggleGroup="$food" />
+      <RadioButton fx:id="radio3" layoutX="380.0" layoutY="122.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Mac and cheese" toggleGroup="$food" />
+      <RadioButton fx:id="radio4" layoutX="37.0" layoutY="185.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Biscuits and gravy" toggleGroup="$food" />
+      <RadioButton fx:id="radio5" layoutX="213.0" layoutY="185.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Sharwama" toggleGroup="$food" />
+      <RadioButton fx:id="radio6" layoutX="380.0" layoutY="185.0" mnemonicParsing="false" onAction="#select" prefHeight="30.0" prefWidth="137.0" text="Risotto" toggleGroup="$food" />
+   </children>
+</AnchorPane>
