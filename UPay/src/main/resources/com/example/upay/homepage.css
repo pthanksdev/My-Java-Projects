@@ -1,0 +1,20 @@
+#root{
+    -fx-background-color: #0A192F;
+    -fx-border-radius: 10px;
+    }
+#root2{
+    -fx-background-color: #1A2D4A;
+    -fx-border-radius: 20px;
+    }
+#root3{
+    -fx-background-color: #CCD6F6;
+    -fx-border-radius: 20px;
+}
+#root4{
+    -fx-background-color: #CCD6F6;
+    -fx-border-radius: 20px;
+}
+#root5{
+    -fx-background-color: #CCD6F6;
+    -fx-border-radius: 20px;
+}

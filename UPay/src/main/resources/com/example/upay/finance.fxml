@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.upay.FinanceController">
+   <content>
+      <AnchorPane prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: #0A192F;">
+      
+          <children>
+               <Label layoutX="10.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Finance Dashboard" textFill="WHITE" />
+      
+               <Label fx:id="balanceLabel" layoutY="49.33333206176758" style="-fx-font-size: 16px;" />
+      
+               <Label layoutX="10.0" layoutY="49.0" style="-fx-font-size: 16px;" text="Safebox Savings" textFill="WHITE" />
+               <TextField fx:id="safeboxAmountField" layoutX="10.0" layoutY="84.0" prefHeight="30.0" prefWidth="270.0" promptText="Amount to save regularly" style="-fx-background-radius: 10px;" />
+               <ComboBox fx:id="frequencyBox" layoutX="10.0" layoutY="127.0" promptText="Select frequency" style="-fx-background-radius: 10px;" />
+               <Button layoutX="11.0" layoutY="169.0" onAction="#handleSetSafebox" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #F0E68C;" text="Set Safebox Plan" textFill="#0a192f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+      
+               <Separator layoutX="1.0" layoutY="230.0" prefHeight="20.0" prefWidth="360.0" />
+      
+               <Label layoutX="10.0" layoutY="259.0" style="-fx-font-size: 16px;" text="Withdraw from Savings" textFill="WHITE" />
+               <TextField fx:id="withdrawField" layoutX="10.0" layoutY="300.0" prefHeight="30.0" prefWidth="270.0" promptText="Amount to withdraw" style="-fx-background-radius: 10px;" />
+               <Button layoutX="11.0" layoutY="352.0" onAction="#handleWithdraw" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #F0E68C;" text="Withdraw" textFill="#0a192f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+      
+               <Separator layoutX="9.0" layoutY="426.0" prefHeight="20.0" prefWidth="360.0" />
+      
+               <Label layoutX="4.0" layoutY="455.0" style="-fx-font-size: 16px;" text="Set Savings Target" textFill="WHITE" />
+               <TextField fx:id="targetAmountField" layoutX="4.0" layoutY="496.0" prefHeight="30.0" prefWidth="270.0" promptText="Target Amount" style="-fx-background-radius: 10px;" />
+               <DatePicker fx:id="targetDatePicker" layoutX="4.0" layoutY="543.0" style="-fx-background-radius: 5px;" />
+               <Button layoutX="6.0" layoutY="588.0" onAction="#handleSetTarget" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #F0E68C;" text="Set Target" textFill="#0a192f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+               <ProgressBar fx:id="progressBar" layoutX="9.0" layoutY="658.0" prefHeight="18.0" prefWidth="360.0" progress="0.0" />
+               <Label fx:id="targetProgressLabel" layoutY="649.3333129882812" />
+      
+               <Separator layoutY="682.0" prefHeight="20.0" prefWidth="360.0" />
+      
+               <Label layoutY="700.6666870117188" style="-fx-font-size: 16px;" text="Savings History" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+               <ListView fx:id="historyListView" layoutY="741.0" prefHeight="150" prefWidth="369.0" />
+      
+               <Label fx:id="statusLabel" layoutX="90.0" layoutY="408.0" prefHeight="17.0" prefWidth="197.0" style="-fx-text-fill: green;" wrapText="true" />
+            <Button fx:id="closeButton" layoutX="324.0" layoutY="16.0" mnemonicParsing="false" onAction="#goBackToHomepage" style="-fx-background-color: #0A192F;" text="x" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+          </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

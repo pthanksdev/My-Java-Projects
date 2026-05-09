@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.upay.BettingReceipt"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox spacing="10" alignment="CENTER" layoutX="50" layoutY="50" prefWidth="300">
+        <Label text="Betting Receipt" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        <Label fx:id="platformLabel" />
+        <Label fx:id="accountLabel" />
+        <Label fx:id="amountLabel" />
+        <Label fx:id="statusLabel" />
+        <Button text="Back to Home" onAction="#goBackHome" />
+    </VBox>
+</AnchorPane>
